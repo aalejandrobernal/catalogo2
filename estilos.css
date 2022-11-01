@@ -1,0 +1,377 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #182540;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+header {
+	padding: none;
+}
+
+header .contenedor1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: #F21B54;
+	font-size: 40px;
+	padding-left: 15px;
+}
+header nav a {
+	color: rgb(219, 219, 219);
+	text-decoration: none;
+	margin-right: 20px;
+}
+header nav a:hover,
+header nav a.activo {
+	color: #F21B54;
+}
+header form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+header .barra-busqueda {
+	width: 70%;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+}
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: rgb(219, 219, 219);
+	margin: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+header .categorias a.activo {
+	color:#F21B54 ;
+}
+
+/* ------------------------- */
+/* paginacion */
+/* ------------------------- */
+.paginacion {
+	margin:20px 0;
+}
+.paginacion ul {
+	list-style:none;
+	text-align: center;
+}
+.paginacion ul li {
+	display:inline-block;
+	margin-right:10px;
+}
+
+.paginacion ul li a {
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	border-radius: 20px;
+/*	background:#024959;*/
+
+	text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+	background:#F21B54;
+}
+
+.paginacion ul li .active {
+	background:#F21B54;
+	font-weight:bold;
+}
+/* ------------------------- */
+/* tabla basica */
+/* ------------------------- */
+header .columna {
+	float: left;
+	width: 25%;
+	padding-right: 5px;
+}
+
+header .fila::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header img {
+	/* Para que sea responsiva */
+	width: 100%;
+}
+/* ------------------------- */
+/* Grid */
+/* ------------------------- */
+
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 0.5s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(20% - 20px);
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+	width: 100%;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row-reverse;
+}
+
+.overlay.activo {
+	display: flex;
+}
+
+.overlay img {
+	max-width: 90%;
+	display:flex ;
+	position: center;
+	width: 600px;
+	
+}
+.overlay .texto {
+	position: center;
+	width: 900px;
+	margin: 10px 40px;
+	top: 0;
+	bottom: 0;
+	left: 30px;
+	right: 30px;
+	max-width: 100%;
+	
+}
+.overlay .titulo {
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	background: #462673;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 10px;
+	max-width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+
+}
+.overlay .descripcion {
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	background: #462673;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 10px;
+	max-width: 100%;
+	text-align: left;
+	font-size: 20px;
+}
+.overlay .t-topografico {
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	color: #fff;
+	margin: 5px;
+	max-width: 100%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.overlay .topografico {
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	background: #462673;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 10px;
+	max-width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.overlay .video
+{   border: none;
+    max-width: 100%;
+	position: center;
+	width:850px;
+	height:400px;
+}
+.contenedor-img {
+	position:static;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 100px;
+	color:#fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: 200px;
+	top: 100px;
+}
+
+/* ------------------------- */
+/* Footer */
+/* ------------------------- */
+footer .redes-sociales {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+footer .redes-sociales a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #000;
+	color: #fff;
+	margin: 20px;
+	text-align: center;
+	border-radius: 100px;
+	transition: .3s ease all;
+}
+
+footer .redes-sociales .twitter {background: #1da1f2;}
+footer .redes-sociales .facebook {background: #3b5998;}
+footer .redes-sociales .instagram {background: #c13584;}
+
+footer .redes-sociales a i {
+	font-size: 20px;
+	line-height: 60px;
+}
+
+footer .contenedor-icono:hover a {
+	animation: icono .5s ease;
+}
+
+@keyframes icono {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,0, 360deg);
+	}
+}
+
+footer .creado-por {
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #c13584;
+}
+
+footer .creado-por a {color: #fff;}
+footer .creado-por a:hover {text-decoration: underline;}
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 1366px) {
+	.grid .item {
+		width: calc(20% - 20px);
+	}
+	.overlay .texto{
+		width: calc(50% - 20px);
+	}
+	.overlay .texto .descripcion,
+	.overlay .texto .titulo,
+	.overlay .texto .topografico{
+		font-size: 15px;
+		padding: 10px;
+	}
+	.overlay .texto .t-topografico{
+		font-size: 20px;
+		padding: none;
+	}
+	.overlay .texto .video{
+		width: calc(95% - 20px);
+		
+	}
+	.overlay .contenedor-img{
+		width: calc(30% - 20px);
+	}
+	.overlay #btn-cerrar-popup {
+		background: none;
+		font-size: 50px;
+		right: 100px;
+		top: 50px;
+	}
+	
+	header .barra-busqueda {
+		width: 80%;
+	}
+}

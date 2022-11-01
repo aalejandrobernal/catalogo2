@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #182540;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+header {
+	padding: none;
+}
+
+header .contenedor1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: #F21B54;
+	font-size: 40px;
+	padding-left: 15px;
+}
+header nav h2{
+    color: rgb(219, 219, 219);
+    text-decoration: none;
+	margin-right: 20px;
+}
+header nav a {
+	color: rgb(219, 219, 219);
+	text-decoration: none;
+	margin-right: 20px;
+}
+header nav a:hover,
+header nav a.activo {
+	color: #F21B54;
+}
+header form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+header .barra-busqueda {
+	width: 70%;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+}
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: rgb(219, 219, 219);
+	margin: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+header .categorias a.activo {
+	color:#F21B54 ;
+}
+/* ------------------------- */
+/* TABLA */
+/* ------------------------- */
+
+#main{
+	margin: 10px auto;
+	width: 98%;
+}
+.tabla{
+	background: #fff;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+th,td{
+	padding: 5px;
+    
+}
+thead{
+	background-color: #F21B54;
+	border-bottom:solid 5px gray;
+	color: #fff;
+}
+tr:nth-child(even){
+	background-color:gray ;
+}
+tr:hover td{
+	background-color: #F21B54 ;
+	color: #fff;
+}
+
+.container_table {
+	width: 95%;
+	background: gray;
+	margin:  10px auto;
+
+	display: grid;
+    grid-template-columns: repeat(9,1fr);
+    row-gap: 5px;
+    /*grid-auto-rows: 100px;*/
+}
+.titulo_tabla{
+    grid-column-start: 1;
+    grid-column-end: 10;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+.header_tabla .item_tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.header_tabla{
+    font-weight: bold;
+    font-size: 1.0em;
+}
+.item_tabla{
+	grid-template-columns: 10% ;
+    padding: 5px;
+    font-size: 0.7em;
+    table-layout: auto;
+    word-break:break-all;
+	background: white;  
+}
+
